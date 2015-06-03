@@ -2,4 +2,9 @@
 <p class="mainwords">Choose your busstop!</p>
 <div class="container">
     <input class="searchfiled" ng-model="searchText" placeholder="Put you busstop name here...">
+    <ul class="search-results__list">
+        <li class="search-results__list__item" ng-repeat = "stop in busstopsArray track by $index">
+            {{stop.stationName}} -- {{stop.buses[0].number}}, {{stop.buses[1].number}}
+        </li>
+    </ul>
 </div>
