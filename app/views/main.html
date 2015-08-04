@@ -3,8 +3,15 @@
 <div class="container">
     <input class="searchfiled" ng-model="searchText" placeholder="Put you busstop name here...">
     <ul class="search-results__list">
-        <li class="search-results__list__item" ng-repeat = "stop in busstopsArray track by $index">
-            {{stop.stationName}} -- {{stop.buses[0].number}}, {{stop.buses[1].number}}
+        <li class="search-results__list__item" ng-repeat = "stop in busstopsArray | filter:searchText track by $index">
+            {{stop.stationName}}
+            <ul>
+                <li ng-repeat = "bus in stop.buses track by $index" ng-show="bus.times">
+                        {{bus.number}} -
+                        <span>{{timeService.getClosestTime(bus.times)}}</span>
+                        <!--<span ng-repeat = "time in bus.times track by $index"> {{time}} </span>-->
+                </li>
+            </ul>
         </li>
     </ul>
 </div>
