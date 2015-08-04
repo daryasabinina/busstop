@@ -13,6 +13,19 @@ angular.module('busstopApp')
             return busstopsArray;
         };
 
+        busesService.getBusstopByName = function(name) {
+            var station;
+
+            busesService.getBusstopsArray();
+            busstopsArray.forEach(function(item) {
+                if(item.stationName === name) {
+                    station = item;
+                }
+            });
+
+            return station;
+        };
+
         function fetchData() {
             return busesResource.get().$promise;
         }

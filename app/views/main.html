@@ -4,7 +4,7 @@
     <input class="searchfiled" ng-model="searchText" placeholder="Put you busstop name here...">
     <ul class="search-results__list">
         <li class="search-results__list__item" ng-repeat = "stop in busstopsArray | filter:searchText track by $index">
-            {{stop.stationName}}
+            <a href="#/details/{{stop.stationName}}">{{stop.stationName}}</a>
             <ul>
                 <li ng-repeat = "bus in stop.buses track by $index" ng-show="bus.times">
                         {{bus.number}} -

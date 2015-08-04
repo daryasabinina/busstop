@@ -1,0 +1,12 @@
+<img class="mainicon" src="images/icon.png">
+<p class="mainwords">station</p>
+<div class="container">
+    <div class="search-results__list__item">
+        {{station.stationName}}
+        <ul>
+            <li ng-repeat = "bus in station.buses track by $index" ng-show="bus.times">
+                {{bus.number}} - <span ng-repeat = "time in bus.times track by $index"> {{time}} </span>
+            </li>
+        </ul>
+    </div>
+</div>
