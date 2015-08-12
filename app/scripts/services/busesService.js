@@ -6,11 +6,7 @@ angular.module('busstopApp')
             busstopsArray = [];
 
         busesService.getData = function() {
-            fetchData().then(successHandler, errorHandler);
-        };
-
-        busesService.getBusstopsArray = function() {
-            return busstopsArray;
+            return fetchData().then(successHandler, errorHandler);
         };
 
         busesService.getBusstopByName = function(name) {
@@ -31,8 +27,8 @@ angular.module('busstopApp')
         }
 
         function successHandler(data) {
-            busstopsArray =  data.respons;
-            $rootScope.$broadcast('GOT_ALL_DATA', data);
+            busstopsArray = data.respons;
+            return busstopsArray;
         }
 
         function errorHandler() {

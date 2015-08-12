@@ -8,9 +8,7 @@ angular.module('busstopApp')
         $scope.busstopsArray = [];
         $scope.timeService = timeService;
 
-        busesService.getData();
-
-        $scope.$on('GOT_ALL_DATA', function() {
-            $scope.busstopsArray = busesService.getBusstopsArray();
+        busesService.getData().then(function(data){
+            $scope.busstopsArray = data;
         });
   }]);
