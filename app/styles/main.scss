@@ -10,6 +10,7 @@ body {
 .mainicon {
   margin: 30px auto 0;
   display: block;
+  color: #fdff00;
 }
 
 .mainwords {
@@ -37,4 +38,9 @@ input {
   width: 100%;
 }
 
+.favourite--active {
+  polygon {
+    fill: #E5E040;
+  }
+}
 
