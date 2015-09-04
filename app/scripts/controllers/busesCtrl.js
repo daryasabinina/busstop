@@ -27,4 +27,8 @@ angular.module('busstopApp')
             stop.favourite = !stop.favourite;
             localStorage.setItem(stop.stationName, stop.favourite);
         };
+
+        $scope.showModal = function() {
+            $scope.modalShown = true;
+        };
   }]);

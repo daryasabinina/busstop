@@ -34,6 +34,17 @@ input {
   }
 }
 
+.search-results__list__item {
+  list-style: none;
+  a {
+    text-decoration: none;
+    img {
+      height: 35px;
+      vertical-align: middle;
+    }
+  }
+}
+
 .searchfiled {
   width: 100%;
 }
