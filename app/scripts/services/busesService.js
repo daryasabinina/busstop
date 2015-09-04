@@ -12,7 +12,7 @@ angular.module('busstopApp')
         busesService.getBusstopByName = function(name) {
             var station;
 
-            busesService.getBusstopsArray();
+            busesService.getData();
             busstopsArray.forEach(function(item) {
                 if(item.stationName === name) {
                     station = item;

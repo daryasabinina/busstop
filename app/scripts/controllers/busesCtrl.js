@@ -2,33 +2,37 @@
 
 angular.module('busstopApp')
   .controller('busesCtrl', [ '$scope', 'busesService', 'timeService',
-        function ($scope, busesService, timeService) {
+            function ($scope, busesService, timeService) {
 
-        function setFavourites() {
-            $scope.busstopsArray.forEach(function(item) {
-                if (localStorage.getItem(item.stationName) === 'true') {
-                    item.favourite = true;
-                } else {
-                    item.favourite = false;
-                }
+            function setFavourites() {
+                $scope.busstopsArray.forEach(function(item) {
+                    if (localStorage.getItem(item.stationName) === 'true') {
+                        item.favourite = true;
+                    } else {
+                        item.favourite = false;
+                    }
+                });
+            }
+
+            $scope.searchText = '';
+            $scope.busstopsArray = [];
+            $scope.timeService = timeService;
+
+            busesService.getData().then(function(data){
+                $scope.busstopsArray = data;
+                setFavourites();
             });
-        }
 
-        $scope.searchText = '';
-        $scope.busstopsArray = [];
-        $scope.timeService = timeService;
+            $scope.addToFavourites = function(stop) {
+                stop.favourite = !stop.favourite;
+                localStorage.setItem(stop.stationName, stop.favourite);
+            };
 
-        busesService.getData().then(function(data){
-            $scope.busstopsArray = data;
-            setFavourites();
-        });
+            $scope.showModal = function() {
+                $scope.modalShown = true;
+            };
 
-        $scope.addToFavourites = function(stop) {
-            stop.favourite = !stop.favourite;
-            localStorage.setItem(stop.stationName, stop.favourite);
-        };
-
-        $scope.showModal = function() {
-            $scope.modalShown = true;
-        };
+            $scope.closeModal = function() {
+                $scope.modalShown = false;
+            };
   }]);
