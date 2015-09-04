@@ -3,8 +3,8 @@ angular.module('busstopApp')
         'use strict';
 
         var url = '/scripts/json/respons.json';
-
         var busesResource =  $resource(url, {}, {});
 
         return busesResource;
+
     }]);

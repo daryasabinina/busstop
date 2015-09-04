@@ -5,6 +5,19 @@ angular.module('busstopApp')
         var busesService = {},
             busstopsArray = [];
 
+        function fetchData() {
+            return busesResource.get().$promise;
+        }
+
+        function successHandler(data) {
+            busstopsArray = data.respons;
+            return busstopsArray;
+        }
+
+        function errorHandler() {
+            console.log('Something went wrong!');
+        }
+
         busesService.getData = function() {
             return fetchData().then(successHandler, errorHandler);
         };
@@ -22,18 +35,6 @@ angular.module('busstopApp')
             return station;
         };
 
-        function fetchData() {
-            return busesResource.get().$promise;
-        }
-
-        function successHandler(data) {
-            busstopsArray = data.respons;
-            return busstopsArray;
-        }
-
-        function errorHandler() {
-            console.log('Something went wrong!');
-        }
-
         return busesService;
+
     }]);
