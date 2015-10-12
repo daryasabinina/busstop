@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('busstopApp')
-  .controller('busesCtrl', [ '$scope', 'busesService', 'timeService',
-            function ($scope, busesService, timeService) {
+  .controller('busesCtrl', [ '$scope', 'busesService', 'timeService', '$timeout',
+            function ($scope, busesService, timeService, $timeout) {
 
             function setFavourites() {
                 $scope.busstopsArray.forEach(function(item) {
@@ -30,6 +30,10 @@ angular.module('busstopApp')
 
             $scope.showModal = function() {
                 $scope.modalShown = true;
+                $timeout(function() {
+                    google.maps.event.trigger(map, 'resize');
+                    map.setCenter({lat: 53.944160, lng: 27.717491});
+                });
             };
 
             $scope.closeModal = function() {

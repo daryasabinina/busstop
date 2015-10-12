@@ -1,18 +1,20 @@
-<div id="modal" ng-if="modalShown">
+<div id="modal" ng-show="modalShown">
     <div class="modal__shadow"  ng-click="closeModal()"></div>
     <div class="modal__window">
         <div class="modal__container">
-            <map center="41.850033,-87.6500523" zoom="3">
-                <info-window id="1" position="41.850033,-87.6500523" visible="true">
-                    <div ng-non-bindable="">
-                        Chicago, IL<br>
-                        LatLng: {{chicago.lat()}}, {{chicago.lng()}}, <br>
-                        World Coordinate: {{worldCoordinate.x}}, {{worldCoordinate.y}}, <br>
-                        Pixel Coordinate: {{pixelCoordinate.x}}, {{pixelCoordinate.y}}, <br>
-                        Tile Coordinate: {{tileCoordinate.x}}, {{tileCoordinate.y}} at Zoom Level {{map.getZoom()}}
-                    </div>
-                </info-window>
-            </map>
+            <div id="map">
+                <map center="41.850033,-87.6500523" zoom="3">
+                    <info-window id="1" position="41.850033,-87.6500523" visible="true">
+                        <div ng-non-bindable="">
+                            Chicago, IL<br>
+                            LatLng: {{chicago.lat()}}, {{chicago.lng()}}, <br>
+                            World Coordinate: {{worldCoordinate.x}}, {{worldCoordinate.y}}, <br>
+                            Pixel Coordinate: {{pixelCoordinate.x}}, {{pixelCoordinate.y}}, <br>
+                            Tile Coordinate: {{tileCoordinate.x}}, {{tileCoordinate.y}} at Zoom Level {{map.getZoom()}}
+                        </div>
+                    </info-window>
+                </map>
+            </div>
         </div>
     </div>
 </div>

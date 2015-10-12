@@ -14,9 +14,7 @@ angular
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngTouch',
-    'ngMap'
+    'ngSanitize'
   ])
   .config(function ($routeProvider) {
     $routeProvider
