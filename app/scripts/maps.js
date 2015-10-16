@@ -1,19 +1,39 @@
-/**
- * Created by Darya_Sabinina on 9/4/2015.
- */
-var map, marker;
+'use strict';
+var map, stations;
 function initMap() {
     setTimeout(function() {
         map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 53.944160, lng: 27.717491},
             zoom: 17
         });
-        marker = new google.maps.Marker({
-            position: {lat: 53.944160, lng: 27.717491},
-            map: map,
-            title: 'Hello World!'
-        });
-    }, 1000);
 
+        $.getJSON('scripts/json/respons.json', function( data ) {
+            stations =  data.respons;
+            for (var i = 0; i < stations.length; i++) {
+                var station = stations[i],
+                    infoText = '<div style="color: black; font-size: 14px">Available buses: <br>',
+                    infowindow = new google.maps.InfoWindow();
+
+                station.buses.forEach(function(item) {
+                    if (item.times !== null) {
+                        infoText = infoText + '<b>№' + item.number + '</b> ' + ': ' + item.times.join(', ') + '<br>';
+                    }
+                });
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng (station.coordinates.lat, station.coordinates.lng),
+                    map: map,
+                    title: station.stationName,
+                    info: infoText+'</div>'
+                });
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.setContent(this.info);
+                    infowindow.open(map, this);
+                });
+
+            }
+        });
+
+    }, 1000);
 
 }
