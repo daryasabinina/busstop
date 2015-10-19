@@ -6,7 +6,7 @@ function initMap() {
             zoom: 17
         });
 
-        $.getJSON('scripts/json/respons.json', function( data ) {
+        $.getJSON('http://devx.izodev.com/temp/busstops', function( data ) {
             stations =  data.respons;
             for (var i = 0; i < stations.length; i++) {
                 var station = stations[i],
