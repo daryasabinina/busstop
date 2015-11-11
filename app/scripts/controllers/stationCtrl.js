@@ -4,7 +4,9 @@ angular.module('busstopApp')
         function ($scope, $routeParams, $timeout, busesService) {
             initMap();
 
-            $scope.station = busesService.getBusstopByName($routeParams.busStation);
+            busesService.getData().then(function() {
+                $scope.station = busesService.getBusstopByName($routeParams.busStation);
+            });
 
             $scope.showModal = function(stop) {
                 $scope.modalShown = true;
