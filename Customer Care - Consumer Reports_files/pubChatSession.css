@@ -1,0 +1,268 @@
+/*
+ * Copyright (c) 2009 Wilke/Thornton, Inc.
+ * All Rights Reserved
+ * 
+ * File:     css/public/chat/pubChatSession.css
+ * Created:  2009/11/24 - Anne D. Ryan
+ * Modified: 2010/02/16 - Anne D. Ryan
+ *             - CRS-200 - Created - defaults, which may be overridden
+ *           2011/06/20 - Anne D. Ryan
+ *              CRS-273 - Added Info Form css
+ *           2014/05/20 - Anne D. Ryan
+ *             CRS-2111 - Add Chat form checkbox field classes
+ *           2014/05/16 - Anne D. Ryan
+ *             CRS-2119 - Add clear:both to #chatHistory, to fix Firefox wrapping
+ *           2014/07/14 - Anne D. Ryan
+ *             CRS-1639 - Added date/time stamps & left/right message blocks
+ *           2014/08/11 - Anne D. Ryan
+ *             CRS-1921 - Cosmetic changes
+ *           2014/08/14 - Anne D. Ryan
+ *             CRS-2191 - Add style for the getTranscript button's div.
+ */
+ html, body { 
+  overflow: hidden; 
+  margin: 0em;
+  font-family: Sans-Serif;
+  font-size: 10pt;
+}
+
+.allowscroll {
+  overflow:auto;
+}
+
+#chatHeader { 
+  margin-top: 1em;
+  margin-left: 5%; 
+  font-size: x-large;
+  color:#00529B;
+}
+
+#headerImage { 
+  margin-top: -1.25em;
+  margin-right: 2em; 
+  float: right;
+}
+
+#chatFooter { 
+  font-size: 6pt;
+}
+
+/* div containing chat dialog/history */
+#chatHistory {
+  width:90%; 
+  margin-top: 1em;
+  margin-left: 5%;
+  margin-right: 5%;
+  clear: both;
+}
+
+/* control the chat dialog/history field  */
+#frmMsgText {
+  background-color: #F9F9F9;
+  height:15em;
+  width:100%;
+  border-style:solid;
+  border-width: 1px;
+  border-color: gray;
+  overflow:auto; 
+} 
+
+/* div containing the new message entry field. */
+#entryField {
+}
+
+/* Label for newTextArea */
+#newMessageLabel { 
+  margin-top: 1em;
+  margin-left: 5%;
+}
+
+/* div containing newTextArea */
+#chatEntry { 
+  margin-left: 5%; 
+  margin-right: 5%;
+  width:90%; 
+}
+
+/* User entry field */
+#newTextArea {
+  width:100%;
+  font-family: Sans-Serif; 
+  display: inline;
+  border-style:solid;
+  border-width: 1px;
+  border-color: gray;
+  float: none;
+  margin-left: 0em;
+}
+
+/* div for positioning of send button 
+(to style the actual button, use define) */
+#sendButtonDiv { 
+  margin-left: 5%;
+  margin-top: 1.5em;
+}
+
+/* div for positioning of Get Transcript button */
+#transcriptButtonDiv {
+  margin-left: 5%;
+  margin-top: 1.5em;
+}
+
+/* Rep Date/Time stamp class */
+.chatDateTimeRep {
+  color: darkgrey;
+  display: inline;
+  font-size: .8em;
+}
+
+/* Visitor Date/Time stamp class */
+.chatDateTimeVisitor {
+  color: darkgrey;
+  display: inline;
+  font-size: .8em;
+}
+
+/* Rep Label class */
+.chatLabelRep {
+  color: lightslategrey;
+  display: inline;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+/* Visitor Label class */
+.chatLabelVisitor {
+  color: lightslategrey;
+  display: inline;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+/* Message block, aligned left class */
+.chatMsgLeft {
+  background-color: white;
+  border-radius: 0 .25cm .25cm .25cm;
+  box-shadow: 0px 1px 1px 0px rgb(128, 128, 128);
+  clear: both;
+  float: left;
+  margin: .1cm .8cm .1cm .05cm;
+  padding: 0 .2cm .1cm .2cm;
+  text-align: left;
+  width: auto;
+}
+
+/* Message block, aligned right class */
+.chatMsgRight {
+  background-color: white;
+  border-radius: .25cm 0 .25cm .25cm;
+  box-shadow: 0px 1px 1px 0px rgb(128, 128, 128);
+  clear: both;
+  float: right;
+  margin: .1cm .05cm .1cm .8cm;
+  padding: 0 .2cm .1cm .2cm;
+  text-align: left;
+  width: auto;
+}
+
+/* Rep Text - override with chatSessionCss config */
+.chatTextRep  {
+  color: blue;
+}
+
+.chatTextStatus  {
+  color: mediumblue;
+  font-style: italic;
+}
+
+/* Visitor Text - override with chatSessionCss config */
+.chatTextVisitor {
+  color: black; }
+}
+
+/* Info Form Field class */
+
+#divInfoFormFields {
+  margin-left: 5%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+#divInfoParagraph {
+	font-family: Georgia, "Times New Roman";
+  font-size: 1.3em;
+  margin-top: 1em;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+#divInfoParaRequired {
+  font-size: .7em;
+  font-style: italic;
+  padding-top: 2em;
+}
+
+#init_msg {
+	background-color: #FFFFFF;
+	border:1px solid #737373;
+	height:60px;
+	padding:5px;
+	width: 90%;
+}
+
+#typing { font-style: italic;}
+
+/* Info Form Check Box Field span class */
+.checkboxInfoField {
+  float: left;
+  margin-right: .5em;
+}
+
+/* Info Form Check Box Label  span class */
+.checkboxInfoLabel {
+  font-family:Georgia, "Times New Roman";
+  font-size:14px;
+  margin-bottom: .5em;
+  width: 80%;
+}
+
+/* Info Form Field span class */
+.infoField {
+  margin-bottom: .5em;
+  padding:5px;
+  width: 90%;
+}
+
+/* Info Form Label span class */
+.infoLabel {
+  font-family:Georgia, "Times New Roman";
+  font-size:14px;
+  margin-bottom: .5em;
+}
+
+/* Info Form Required "*" class */
+.infoRequired {
+  float: left;
+  color: red;
+  width: 10px;
+}
+
+/* Info Form Row class */
+.infoRow {
+  margin-top: .5em;
+}
+
+/* Info Form Textarea Field span class */
+.textareaInfoField {
+  margin-bottom: .5em;
+  width: 90%;
+}
+
+/* Info Form Textarea Label span class */
+.textareaInfoLabel {
+  float: left;
+  font-family:Georgia, "Times New Roman";
+  font-size:14px;
+  margin-bottom: .5em;
+}

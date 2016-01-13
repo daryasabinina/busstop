@@ -10,7 +10,7 @@
 
 .articlepage .adRight2 {
   width: 300;
-  height: 180;
+  height: 160;
 }
 
 .articlepage .adBottom {
@@ -36,45 +36,5 @@
 .topicspage .adRight1 {
   width: 300;
   height: 150;
-}
-
-.newsarticlepage .ad2 {
-  width: 300;
-  height: 195;
-}
-
-.newsarticlepage .adRight1 {
-  width: 300;
-  height: 250;
-}
-
-.newsarticlepage .adRight2 {
-  width: 300;
-  height: 180;
-}
-
-.newsarticlepage .adBottom {
-  width: 600;
-  height: 60;
-}
-
-.newsarticlepage.old .ad2 {
-  width: 300;
-  height: 195;
-}
-
-.newsarticlepage.old .adRight1 {
-  width: 300;
-  height: 250;
-}
-
-.newsarticlepage.old .adRight2 {
-  width: 300;
-  height: 180;
-}
-
-.newsarticlepage.old .adBottom {
-  width: 600;
-  height: 60;
 }
 
