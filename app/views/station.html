@@ -1,7 +1,8 @@
-<img class="mainicon" src="images/icon.png">
 <p class="mainwords">station</p>
+<modal></modal>
 <div class="container">
     <div class="search-results__list__item">
+        <a href="" ng-click="showModal(station)"><img src="images/w128h1281338911361location.png"></a>
         {{station.stationName}}
         <ul>
             <li ng-repeat = "bus in station.buses track by $index" ng-show="bus.times">

@@ -20,6 +20,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <a href="/"><img class="mainicon" src="images/icon.png"></a>
     <div ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -38,6 +39,7 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
@@ -58,7 +60,13 @@
     <script src="scripts/resources/busesResource.js"></script>
     <script src="scripts/controllers/busesCtrl.js"></script>
     <script src="scripts/controllers/stationCtrl.js"></script>
-
+    <script src="scripts/directives/modal.js"></script>
     <!-- endbuild -->
+
+    <script src="scripts/maps.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE6pR55xcnaLNiHNXlYmOIF7TmgQ2biFI&callback=initMap">
+    </script>
+
 </body>
 </html>

@@ -1,25 +1,19 @@
 // bower:scss
 // endbower
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Helvetica;
   font-size: 2em;
   color: #c9c9c9;
-
 }
 
-.mainicon {
-  margin: 30px auto 0;
-  display: block;
-}
-
-.mainwords {
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.container {
-  width: 40%;
-  margin: 0 auto;
+a {
+  color: #426AE1;
 }
 
 input {
@@ -33,8 +27,74 @@ input {
   }
 }
 
+.mainicon {
+  margin: 30px auto 0;
+  display: block;
+  color: #fdff00;
+}
+
+.mainwords {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.search-results__list__item {
+  list-style: none;
+  a {
+    text-decoration: none;
+    img {
+      height: 35px;
+      vertical-align: middle;
+    }
+  }
+}
+
 .searchfiled {
   width: 100%;
 }
 
+.favourite {
+  font-size: 20px;
+  vertical-align: middle;
+  &--active {
+    polygon {
+      fill: #E5E040;
+    }
+  }
+}
+
+.modal {
+  &__shadow {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  &__window {
+    width: 30%;
+    left: 35%;
+    height: 50%;
+    top: 25%;
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    border-radius: 10px;
+  }
+  &__container {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#map {
+  height: 100%;
+}
 

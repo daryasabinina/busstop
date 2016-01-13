@@ -5,18 +5,26 @@ angular.module('busstopApp')
         var busesService = {},
             busstopsArray = [];
 
-        busesService.getData = function() {
-            fetchData().then(successHandler, errorHandler);
-        };
+        function fetchData() {
+            return busesResource.get().$promise;
+        }
 
-        busesService.getBusstopsArray = function() {
+        function successHandler(data) {
+            busstopsArray = data.respons;
             return busstopsArray;
+        }
+
+        function errorHandler() {
+            console.log('Something went wrong!');
+        }
+
+        busesService.getData = function() {
+            return fetchData().then(successHandler, errorHandler);
         };
 
         busesService.getBusstopByName = function(name) {
             var station;
 
-            busesService.getBusstopsArray();
             busstopsArray.forEach(function(item) {
                 if(item.stationName === name) {
                     station = item;
@@ -26,18 +34,6 @@ angular.module('busstopApp')
             return station;
         };
 
-        function fetchData() {
-            return busesResource.get().$promise;
-        }
-
-        function successHandler(data) {
-            busstopsArray =  data.respons;
-            $rootScope.$broadcast('GOT_ALL_DATA', data);
-        }
-
-        function errorHandler() {
-            console.log('Something went wrong!');
-        }
-
         return busesService;
+
     }]);
