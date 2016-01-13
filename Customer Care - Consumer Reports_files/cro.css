@@ -1,0 +1,80 @@
+.articlepage .ad2 {
+  width: 300;
+  height: 195;
+}
+
+.articlepage .adRight1 {
+  width: 300;
+  height: 250;
+}
+
+.articlepage .adRight2 {
+  width: 300;
+  height: 180;
+}
+
+.articlepage .adBottom {
+  width: 600;
+  height: 60;
+}
+
+.paywall .ad2 {
+  width: 300;
+  height: 190;
+}
+
+.landingpage .right-ad {
+  width: 700;
+  height: 49;
+}
+
+.landingpage .adRight1 {
+  width: 300;
+  height: 150;
+}
+
+.topicspage .adRight1 {
+  width: 300;
+  height: 150;
+}
+
+.newsarticlepage .ad2 {
+  width: 300;
+  height: 195;
+}
+
+.newsarticlepage .adRight1 {
+  width: 300;
+  height: 250;
+}
+
+.newsarticlepage .adRight2 {
+  width: 300;
+  height: 180;
+}
+
+.newsarticlepage .adBottom {
+  width: 600;
+  height: 60;
+}
+
+.newsarticlepage.old .ad2 {
+  width: 300;
+  height: 195;
+}
+
+.newsarticlepage.old .adRight1 {
+  width: 300;
+  height: 250;
+}
+
+.newsarticlepage.old .adRight2 {
+  width: 300;
+  height: 180;
+}
+
+.newsarticlepage.old .adBottom {
+  width: 600;
+  height: 60;
+}
+

@@ -1,0 +1,138 @@
+.timeline-wrapper .timeline-title {
+	font-family: 'Neue Helvetica W01', Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight:100!important;
+	font-size:60px!important;
+	line-height:1.3em!important;
+	color: #000000
+}
+.tl-timeline{
+	font-family: 'Neue Helvetica W01', Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight:300;
+	font-size:16px;
+	line-height:1.3em;
+	color: #000000
+}
+.tl-timeline .tl-slide  h1,.tl-timeline .tl-slide  h2,.tl-timeline .tl-slide  h3,.tl-timeline .tl-slide  h4,.tl-timeline .tl-slide  h5,.tl-timeline .tl-slide  h6{
+	font-family:'Helvetica W01'!important;
+	text-transform:uppercase;
+	font-weight:700;
+	font-stretch: condensed;
+	line-height:2.1em!important;
+	color: #000000
+}
+.tl-timeline .tl-slide h1, .tl-timeline .tl-slide h2{
+	font-size:40px!important;
+	line-height:1.1em!important;
+}
+.tl-timeline .tl-slide h3{
+	line-height:1.7em!important;
+}
+.tl-timeline h2.tl-headline-title{
+	font-size:58px;
+	line-height:58px
+}
+.tl-timeline p{
+	font-family: 'Neue Helvetica W01'!important;
+	font-weight:300;
+	font-size:16px!important;
+	line-height:1.8em!important;
+	color: #000000!important
+}
+.tl-timeline ul{
+	font-family: 'Neue Helvetica W01'!important;
+	font-weight:300!important;
+	font-size:16px!important;
+	color: #000000!important
+}
+.tl-timeline .tl-media .tl-media-wikipedia h4 a,.tl-timeline .tl-media h4,.tl-timeline .tl-media h4 a{
+	font-family:'Helvetica W01';
+	font-weight:700;
+	font-size:24px;
+	font-stretch: condensed;
+	line-height:24px
+}
+.tl-timeline .tl-caption,.tl-timeline .tl-credit{
+	font-family:'Neue Helvetica W01';
+	font-weight:300;
+}
+.tl-timeline .vcard{
+	font-family:'Neue Helvetica W01'!important;
+	font-weight:400!important
+}
+.tl-timeline .tl-message,.tl-timeline .tl-slidenav-next,.tl-timeline .tl-slidenav-previous,.tl-timeline .tl-slidenav-next .tl-slidenav-title,.tl-timeline .tl-slidenav-previous .tl-slidenav-title,.tl-timeline .tl-timegroup-message{
+	font-family:'Neue Helvetica W01';
+	font-weight:300;
+	font-size: 13px!important;
+	color: #999999!important;
+	filter:alpha(opacity=100)!important;
+	-khtml-opacity:1!important;
+	-moz-opacity:1!important;
+	opacity:1!important;
+	text-transform:none
+}
+.tl-timeline .tl-message .tl-slidenav-title,.tl-timeline .tl-slidenav-next .tl-slidenav-title,.tl-timeline .tl-slidenav-previous .tl-slidenav-title,.tl-timeline .tl-timegroup-message .tl-slidenav-title{
+	line-height:1.3em!important
+}
+.tl-timeline .tl-headline-date,.tl-timeline h3.tl-headline-date{	
+	font-family:'Helvetica W01'!important;
+	text-transform:uppercase!important;
+	font-weight:700!important;
+	font-size:22px !important;
+	font-stretch: condensed;
+	color: #BABABA
+}
+.tl-timeline .tl-headline-date small,.tl-timeline h3.tl-headline-date small{
+	font-weight:400!important
+}
+.tl-timeline .tl-timenav-slider{
+	font-family:'Neue Helvetica W01';
+	font-weight:300;
+	font-size: 11px;
+	color: #999999!important;
+}
+.tl-timeline .tl-timemarker-active .tl-headline, .tl-timeline .tl-timemarker-active .fa {
+	color: #000000!important;
+}
+.tl-timeline .tl-timenav-slider h2.tl-headline{
+	font-family:'Helvetica W01';
+	font-weight:700;
+	font-stretch: condensed;
+	text-transform:none
+}
+.tl-timeline .tl-timenav-slider .tl-timeaxis{
+	font-family:'Helvetica W01';
+	text-transform:uppercase;
+	font-stretch: condensed;
+}
+.tl-timeaxis-minor .tl-timeaxis-tick-text, .tl-timeaxis-major .tl-timeaxis-tick-text {
+	font-family:'Helvetica W01';
+	text-transform:uppercase;
+	font-weight:700!important;
+	font-stretch: condensed;
+	color: #000000!important
+}
+.tl-timeaxis-minor .tl-timeaxis-tick-text{
+	font-size: 12px;
+} 
+.tl-timeaxis-major .tl-timeaxis-tick-text {
+	font-size: 16px;
+}
+.tl-timeline .tl-menubar{
+	font-family:'Neue Helvetica W01'
+}
+.tl-timeline blockquote,.tl-timeline blockquote p{
+	font-family: 'Neue Helvetica W01';
+	font-style:italic;
+	font-weight:300;
+	line-height:1.3
+}
+input[type=text].editor-headline{
+	font-family: 'Neue Helvetica W01';
+	text-transform:uppercase;
+	font-weight:700;
+	font-size:46px;
+	line-height:46px
+}
+.tl-timeline .tl-timenav-slider .tl-timeaxis{
+	font-weight:400
+}

@@ -1,0 +1,175 @@
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 27px;
+    margin: 20px 0;
+}
+
+h3 span.highlight {
+	font: bold 18px/21px Arial, Helvetica, sans-serif;
+	}
+
+h4 {
+	font: bold 15px/18px Arial, Helvetica, sans-serif;
+	margin: 20px 0 0;
+	}
+
+h2 + h4 {
+	margin: -6px 0 0;
+}
+
+h3 span.highlight a {
+	color: #EC1C24;
+}
+
+
+.gen-admin-container {
+    padding-right: 20px;
+    font: normal 12px/16px Arial, Helvetica, sans-serif;
+    padding-top:57px;
+}
+
+.gen-admin-container .text-box {
+    margin: 0 0 8px;
+}
+
+.gen-admin-container {
+	font: normal 12px/16px Arial, Helvetica, sans-serif;
+}
+
+.gen-admin-container p {
+	padding: 17px 0 0;
+}
+
+.gen-admin-container p:first-child {
+	padding: 0;
+	}
+
+ .adminMenu {
+    border: 3px solid #BFCAD3;
+	border-style: solid none;
+    margin: 30px 0 18px;
+ }
+
+.adminMenu ul {
+    font: bold 15px/37px Arial, Helvetica, sans-serif;
+	margin-bottom: 0;
+	padding: 0 0 30px;
+    list-style : none outside none;
+    margin-left : 0;
+}
+
+.adminMenu li {
+    border-bottom: 1px solid #BFCAD3;
+    margin: 0;
+    /* text-indent: 6px; */
+}
+
+.adminMenu li:first-child {
+    border-top: 0 none;
+}
+
+.adminMenu li:last-child  {
+    border-bottom: 1px solid #BFCAD3;
+}
+
+.adminMenu li a:link,
+.adminMenu li a:visited,
+.adminMenu li a:hover,
+.adminMenu li a:active {
+    color:#000000;
+	font-weight: bold;
+	padding: 6px;
+	text-decoration: none;
+}
+
+.adminMenu li a:hover {
+	background-color: #c3c9cf;
+	text-decoration: none;
+}
+
+.adminMenu li a.on {
+	background-color: #e7e7e7;
+	}
+
+.adminMenu ul.sub-nav {
+	border: 0 none;
+    font: normal 12px/22px Arial, Helvetica, sans-serif;
+	display: none;
+	margin: 0 0 8px;
+	padding: 0;
+}
+
+.adminMenu ul.sub-nav li {
+	border: 0 none;
+	margin: 0 0 0 12px;
+}
+
+
+.adminMenu li ul.sub-nav a,
+.adminMenu li ul.sub-nav a:link,
+.adminMenu li ul.sub-nav a:visited,
+.adminMenu li ul.sub-nav a:hover,
+.adminMenu li ul.sub-nav a:active {
+	font-weight: normal;
+	padding: 2px;
+}
+
+.adminMenu li .sub-nav a:hover {
+	background-color: #c3c9cf;
+	text-decoration: none;
+}
+
+.adminMenu li a.on:hover {
+	background-color: #e7e7e7;
+	}
+
+.gen-admin-links ul {
+    color: #000000;
+    font: normal 12px Arial,Helvetica,sans-serif;
+    margin: 0 0 20px;
+    padding: 0 6px 6px;
+    list-style: none;
+}
+
+.gen-admin-links li {
+   color: #000000;
+   margin-bottom: 5px;
+}
+
+.gen-admin-links li a,
+.gen-admin-links li a:link,
+.gen-admin-links li a:active,
+.gen-admin-links li a:hover,
+.gen-admin-links li a:active {
+    background-color:#fff;
+    color:#000000;
+    font-weight:normal;
+    text-decoration:none;
+}
+
+.gen-admin-links li a:hover {
+    background-color:#C3C9CF;
+}
+
+.gen-admin-links li a.on {
+	background-color: #e7e7e7;
+	}
+
+.gen-admin-links li a.on:hover {
+	background-color: #e7e7e7;
+	}
+
+.annual-questionnaire {
+	border-bottom: 1px solid #BFCAD3;
+    border-top: 1px solid #BFCAD3;
+    clear: both;
+    height: 20px;
+    margin: 15px 0 26px;
+    padding: 16px 0;
+}
