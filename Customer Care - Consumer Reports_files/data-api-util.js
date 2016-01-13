@@ -188,31 +188,24 @@
     /**
      * Perform an ajax call and store results in-memory
      * Caching strategy could be implemented here
-     * @param path
+     * @param url
      * @param next
      */
-    function cachedJSONQuery(path, next) {
-        this.cachedQuery(path, {dataType: 'json'}, next);
-    }
+    function cachedJSONQuery(url, next) {
+        var _this = this;
 
-    function cachedQuery(url, options, next) {
-        var _this;
-
-        _this = this;
-
-        if (_this.__cacheManager.hasItem(url) && false) {
+        if (_this.__cacheManager.hasItem(url)) {
             next(null, _this.__cacheManager.getItem(url));
 
         } else {
 
-            $.ajax($.extend({url: url, crossDomain: true}, options)).always(function (response, status) {
+            $.getJSON(url).always(function (data, status) {
 
                 if (status === 'success') {
-                    //   _this.__cacheManager.setItem(url, response, _this.options.expiration);
-                    next(null, response);
+                    _this.__cacheManager.setItem(url, data, _this.options.expiration);
+                    next(null, data);
                 } else {
-                    response.url = url;
-                    next('API Error', response);
+                    next('API Error');
                 }
             });
         }
@@ -222,7 +215,6 @@
 
     DataApiUtil.prototype.apiQuery = apiQuery;
     DataApiUtil.prototype.cachedJSONQuery = cachedJSONQuery;
-    DataApiUtil.prototype.cachedQuery = cachedQuery;
 
 
     return DataApiUtil;

@@ -12351,8 +12351,8 @@
   }
 }.call(this));
 
-window.lodash = _.noConflict();
+var lodash = _.noConflict();
 
-window.lodash.templateSettings.interpolate = /{%=([\s\S]+?)%}/g;
-window.lodash.templateSettings.evaluate = /{%([\s\S]+?)%}/g;
-window.lodash.templateSettings.escape = /{%-([\s\S]+?)%}/g;
+lodash.templateSettings.interpolate = /{%=([\s\S]+?)%}/g;
+lodash.templateSettings.evaluate = /{%([\s\S]+?)%}/g;
+lodash.templateSettings.escape = /{%-([\s\S]+?)%}/g;
